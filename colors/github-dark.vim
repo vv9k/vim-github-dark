@@ -98,6 +98,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   call GHighlight("pythonOperator", "blue", "none")
   call GHighlight("shEcho", "blue", "none")
   call GHighlight("htmlTagName", "green", "none")
+  call GHighlight("vimHiGroup", "yellow", "none")
 
   hi! link shVariable Normal
   hi! link shDerefSimple Normal
@@ -149,7 +150,6 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi! link LibraryType Type
   hi! link FunctionDef Function
 
-  hi! link pythonClass yellow
 
   hi! link Terminal Normal
   hi! link TabLine StatusLineNC
@@ -348,16 +348,28 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi! link typescriptVariableDeclaration IdentifierDef
   hi! link vimAutoCmdSfxList LibraryType
   hi! link vimAutoEventList LocalIdent
-  hi! link vimCmdSep Special
   hi! link vimCommentTitle SpecialComment
-  hi! link vimContinue Delimiter
+  hi! link vimSep Normal
+  hi! link vimCmdSep vimSep
+  hi! link vimParenSep vimSep
+  hi! link vimContinue vimSep
+  hi! link vimFuncVar Normal
+  hi! link vimGroup vimHiGroup
   hi! link vimFuncName LibraryFunc
   hi! link vimFunction FunctionDef
-  hi! link vimHighlight Statement
+  hi! link vimHighlight Operator
+  hi! link vimOper Keyword
+  hi! link vimHiBang vimOper
+  hi! link vimLet vimOper
+  hi! link vimCommand Keyword
   hi! link vimMapModKey vimNotation
   hi! link vimNotation LibraryType
   hi! link vimOption LibraryIdent
+  hi! link vimIsCommand vimOption
+  hi! link vimOperParen Normal
   hi! link vimUserFunc LocalFunc
+  hi! link vimExecute LocalFunc
+  hi! link vimVar Normal
   hi! link markdownBoldDelimiter markdownDelimiter
   hi! link markdownBoldItalicDelimiter markdownDelimiter
   hi! link markdownCodeBlock markdownCode
