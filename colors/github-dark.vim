@@ -17,7 +17,6 @@ let g:github_colors = {
 
 if !exists("g:gh_color")
     let g:gh_color = "hard"
-    echo g:gh_color
 endif
 
 if g:gh_color ==# "soft"
