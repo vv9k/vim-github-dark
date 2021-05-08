@@ -147,6 +147,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi! link LibraryIdent Identifier
   hi! link LibraryFunc Function
   hi! link LibraryType Type
+  hi! link FunctionDef Function
 
   hi! link pythonClass yellow
 
