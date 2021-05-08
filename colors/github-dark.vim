@@ -89,6 +89,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   call GHighlight("NonText", "base3", "none")
   call GHighlight("Question", "base4", "none")
   call GHighlight("MoreMsg", "base4", "none")
+  call GHighlight("Delimiter", "base5", "none")
   call GHighlight("ModeMsg", "base4", "none")
   call GHighlight("Search", "base5", "base2")
   call GHighlight("IncSearch", "base5", "base2")
@@ -98,25 +99,32 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   call GHighlight("DiffAdd", "green", "base0")
   call GHighlight("DiffDelete", "redorange", "base0")
   call GHighlight("DiffChange", "yellow", "base0")
-  call GHighlight("PreProc", "blue", "none")
+  call GHighlight("PreProc", "base5", "none")
   call GHighlight("pythonOperator", "blue", "none")
   call GHighlight("shEcho", "blue", "none")
   call GHighlight("htmlTagName", "green", "none")
   call GHighlight("vimHiGroup", "yellow", "none")
 
   hi! link shVariable Normal
-  hi! link shDerefSimple Normal
-  hi! link shDeref shDerefSimple
+  hi! link shAlias shVariable
+  hi! link shDerefSimple shVariable
+  hi! link shDeref shVariable
+  hi! link shDerefPPS Keyword
   hi! link shParen Normal
   hi! link shRange shParen
   hi! link shSnglCase shParen
+  hi! link shWrapLineOperator shParen
+  hi! link shOperator shParen
   hi! link shCaseLabel Type
   hi! link shQuote Constant
   hi! link shDoubleQuote shQuote
   hi! link shFunctionOne Normal
   hi! link shOption shFunctionOne
+  hi! link shSetList shFunctionOne
+  hi! link shFunctionKey Keyword
   hi! link shStatement Keyword
-  hi! link shOperator shStatement
+  hi! link shRedir Keyword
+
   hi! link shEcho Normal
 
   hi! link rustAttribute Normal
@@ -264,17 +272,22 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi! link jsDomNodeConsts LibraryIdent
   hi! link jsExceptions LibraryType
   hi! link jsFuncName Function
+  hi! link jsDot Normal
   hi! link jsFuncParens Normal
   hi! link jsFuncArgCommas jsFuncParens
   hi! link jsParensIfElse jsFuncBraces
   hi! link jsFuncBraces jsFuncBraces
   hi! link jsIfElseBraces jsFuncBraces
+  hi! link jsObjectBraces jsFuncBraces
+  hi! link jsDestructuringBraces jsFuncBraces
   hi! link jsNoise jsFuncBraces
   hi! link jsParens jsFuncBraces
+  hi! link jsObjectSeparator jsFuncBraces
   hi! link jsFunction jsStatement
-  hi! link jsGlobalNodeObjects jsGlobalObjects
   hi! link jsGlobalObjects Normal
+  hi! link jsGlobalNodeObjects jsFuncName
   hi! link jsObjectProp LocalIdent
+  hi! link jsObjectKey jsObjectProp
   hi! link jsOperatorKeyword jsStatement
   hi! link jsThis jsStatement
   hi! link jsVariableDef IdentifierDef
