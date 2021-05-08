@@ -13,7 +13,9 @@ To later use it add `colorscheme github-dark` to your `init.vim` or `vimrc` file
 There are two backgrounds available, the default is the dark one matching the GitHub website. To use the slightly softer one set `let g:gh_color = "soft"` in your `vimrc`.
 
 ## Screenshots
+### Default dark background
 ![screenshot of default dark syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen.png)
+### With `g:gh_color = "soft"`
 ![screenshot of soft syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen-soft.png)
 ![screenshot of rust syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen1.png)
 
