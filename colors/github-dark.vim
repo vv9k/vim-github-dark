@@ -1,6 +1,6 @@
 let g:colors_name = 'github-dark'
 let g:github_colors = {
-  \ "base0"        : "#22272e",
+  \ "base0"        : "#0d1117",
   \ "base1"        : "#2d333b",
   \ "base2"        : "#373e47",
   \ "base3"        : "#768390",
@@ -15,8 +15,13 @@ let g:github_colors = {
   \ "green"        : "#8ddb8c",
   \ "none"         : "NONE", }
 
-if &background ==# 'light'
-    g:github_colors["base0"] = "#CFCCDA"
+if !exists("g:gh_color")
+    let g:gh_color = "hard"
+    echo g:gh_color
+endif
+
+if g:gh_color ==# "soft"
+    let g:github_colors["base0"] = "#161b22"
 endif
 
 function _ghighlight(group, guifg, guibg, style)

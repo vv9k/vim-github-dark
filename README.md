@@ -8,8 +8,13 @@ To install using [vim-plug](https://github.com/junegunn/vim-plug) add this line 
 
 To later use it add `colorscheme github-dark` to your `init.vim` or `vimrc` file
 
+# Config
+
+There are two backgrounds available, the default is the dark one matching the GitHub website. To use the slightly softer one set `let g:gh_color = "soft"` in your `vimrc`.
+
 ## Screenshots
-![screenshot of vim syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen.png)
+![screenshot of default dark syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen.png)
+![screenshot of soft syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen-soft.png)
 ![screenshot of rust syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen1.png)
 
 ## License
