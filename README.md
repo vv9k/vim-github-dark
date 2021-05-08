@@ -18,6 +18,10 @@ There are two backgrounds available, the default is the dark one matching the Gi
 ### With `g:gh_color = "soft"`
 ![screenshot of soft syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen-soft.png)
 ![screenshot of rust syntax](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/screen1.png)
+### Custom colors for [vim-airline](https://github.com/vim-airline/vim-airline)
+![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline1.png)
+![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline2.png)
+![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline3.png)
 
 ## License
 [MIT](https://raw.githubusercontent.com/wojciechkepka/pkger/master/LICENSE)
