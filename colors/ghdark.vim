@@ -1,4 +1,4 @@
-let g:colors_name = 'github-dark'
+let g:colors_name = 'ghdark'
 let g:github_colors = {
   \ "base0"        : ["#0d1117", 233],
   \ "base1"        : ["#2d333b", 235],
