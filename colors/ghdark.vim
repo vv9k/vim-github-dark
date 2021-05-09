@@ -152,7 +152,7 @@ call s:ghhl("GhPurp", "purp")
 call s:ghhl("GhLightGreen", "lightgreen")
 call s:ghhl("GhGreen", "green")
 
-call s:ghhl("Cursor", "none", "base4")
+call s:ghhl("Cursor", "base4", "none", "reverse")
 call s:ghhl("CursorColumn", "none", "base1")
 call s:ghhl("CursorLine", "none", "base1")
 call s:ghhl("CursorLineNr", "lightblue", "base2")
