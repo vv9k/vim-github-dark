@@ -569,6 +569,14 @@ hi! link vimParenSep vimSep
 hi! link vimSep Normal
 hi! link vimUserFunc LocalFunc
 hi! link vimVar Normal
+hi! link vimUserAttrb Identifier
+hi! link vimUserCommand vimUserAttrb
+hi! link vimPatSepR GhLightGreen
+hi! link vimPatRegion vimPatSepR
+hi! link vimSynNotPatRange vimPatSepR
+hi! link vimSynKeyRegion Keyword
+hi! link vimSynType Identifier
+hi! link vimSyncMatch vimSynType
 
 hi! link VisualNOS Visual
 hi! link Whitespace Ignore
