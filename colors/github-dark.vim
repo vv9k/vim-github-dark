@@ -6,18 +6,48 @@ let g:github_colors = {
   \ "base3"        : ["#768390", 243],
   \ "base4"        : ["#adbac7", 249],
   \ "base5"        : ["#cdd9e5", 252],
-  \ "redorange"    : ["#f47067", 167],
+  \ "lightred"     : ["#f47067", 210],
+  \ "red"          : ["#f14438", 203],
   \ "yellow"       : ["#daaa3f", 178],
+  \ "lightyellow"  : ["#e2bb68", 221],
   \ "lightblue"    : ["#9ad5ff", 153],
   \ "blue"         : ["#6cb6ff", 75],
-  \ "purp"         : ["#dcbdfb", 183],
-  \ "green"        : ["#8ddb8c", 114],
+  \ "lightpurp"    : ["#dcbdfb", 183],
+  \ "purp"         : ["#ac63f6", 135],
+  \ "lightgreen"   : ["#8ddb8c", 114],
+  \ "green"        : ["#53c851", 76],
   \ "none"         : ["NONE", "NONE"]
   \ }
 
 " if doesn't support termguicolors or < 256 colors exit
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
+endif
+
+if has('nvim')
+    let g:terminal_color_0 = g:github_colors["base0"][0]
+    let g:terminal_color_8 = g:github_colors["base3"][0]
+
+    let g:terminal_color_1 = g:github_colors["red"][0]
+    let g:terminal_color_9 = g:github_colors["lightred"][0]
+
+    let g:terminal_color_2 = g:github_colors["green"][0]
+    let g:terminal_color_10 = g:github_colors["lightgreen"][0]
+
+    let g:terminal_color_3 = g:github_colors["yellow"][0]
+    let g:terminal_color_11 = g:github_colors["lightyellow"][0]
+
+    let g:terminal_color_4 = g:github_colors["blue"][0]
+    let g:terminal_color_12 = g:github_colors["lightblue"][0]
+
+    let g:terminal_color_5 = g:github_colors["purp"][0]
+    let g:terminal_color_13 = g:github_colors["lightpurp"][0]
+
+    let g:terminal_color_6 = g:github_colors["blue"][0]
+    let g:terminal_color_14 = g:github_colors["lightblue"][0]
+
+    let g:terminal_color_7 = g:github_colors["base4"][0]
+    let g:terminal_color_15 = g:github_colors["base5"][0]
 endif
 
 if !exists("g:gh_color")
@@ -77,18 +107,18 @@ call s:ghhl("CursorColumn", "none", "base1")
 call s:ghhl("CursorLine", "none", "base1")
 call s:ghhl("CursorLineNr", "base4", "base1")
 call s:ghhl("Delimiter", "base5")
-call s:ghhl("DiffAdd", "green", "base0")
+call s:ghhl("DiffAdd", "lightgreen", "base0")
 call s:ghhl("DiffChange", "yellow", "base0")
-call s:ghhl("DiffDelete", "redorange", "base0")
+call s:ghhl("DiffDelete", "lightred", "base0")
 call s:ghhl("Directory", "blue")
-call s:ghhl("ErrorMsg", "redorange", "base0")
-call s:ghhl("Error", "none", "redorange")
+call s:ghhl("ErrorMsg", "lightred", "base0")
+call s:ghhl("Error", "none", "lightred")
 call s:ghhl("Folded", "blue", "base2")
-call s:ghhl("Function", "purp")
-call s:ghhl("htmlTagName", "green")
+call s:ghhl("Function", "lightpurp")
+call s:ghhl("htmlTagName", "lightgreen")
 call s:ghhl("Identifier", "blue")
 call s:ghhl("IncSearch", "base5", "base2")
-call s:ghhl("Keyword", "redorange")
+call s:ghhl("Keyword", "lightred")
 call s:ghhl("Label", "blue")
 call s:ghhl("LineNr", "base3")
 call s:ghhl("MatchParen", "none", "base3")
@@ -102,18 +132,18 @@ call s:ghhl("PmenuSel", "base4", "base2")
 call s:ghhl("PreProc", "base5")
 call s:ghhl("pythonOperator", "blue")
 call s:ghhl("Question", "base4")
-call s:ghhl("Repeat", "purp")
+call s:ghhl("Repeat", "lightpurp")
 call s:ghhl("Search", "base5", "base2")
 call s:ghhl("shEcho", "blue")
 call s:ghhl("SignColumn", "none", "base0")
 call s:ghhl("Special", "blue")
 call s:ghhl("SpecialKey", "base3")
-call s:ghhl("Statement", "redorange")
+call s:ghhl("Statement", "lightred")
 call s:ghhl("StatusLine", "base1", "base3")
 call s:ghhl("StatusLineNC", "base1", "base3")
 call s:ghhl("Title", "base4")
 call s:ghhl("Todo", "base4", "base0")
-call s:ghhl("Type", "redorange")
+call s:ghhl("Type", "lightred")
 call s:ghhl("VertSplit", "base1", "base1")
 call s:ghhl("vimHiGroup", "yellow")
 call s:ghhl("Visual", "base3", "base1")
