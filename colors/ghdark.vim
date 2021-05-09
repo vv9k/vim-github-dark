@@ -24,6 +24,9 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
+"########################################
+" Terminal colors for NeoVim
+
 if has('nvim')
     let g:terminal_color_0 = g:github_colors["base0"][0]
     let g:terminal_color_8 = g:github_colors["base3"][0]
@@ -48,6 +51,35 @@ if has('nvim')
 
     let g:terminal_color_7 = g:github_colors["base4"][0]
     let g:terminal_color_15 = g:github_colors["base5"][0]
+endif
+
+" Terminal colors for Vim
+if has('*term_setansicolors')
+    let g:terminal_ansi_colors = repeat([0], 16)
+
+    let g:terminal_ansi_colors[0] = g:github_colors["base0"][0]
+    let g:terminal_ansi_colors[8] = g:github_colors["base3"][0]
+
+    let g:terminal_ansi_colors[1] = g:github_colors["red"][0]
+    let g:terminal_ansi_colors[9] = g:github_colors["lightred"][0]
+
+    let g:terminal_ansi_colors[2] = g:github_colors["green"][0]
+    let g:terminal_ansi_colors[10] = g:github_colors["lightgreen"][0]
+
+    let g:terminal_ansi_colors[3] = g:github_colors["yellow"][0]
+    let g:terminal_ansi_colors[11] = g:github_colors["lightyellow"][0]
+
+    let g:terminal_ansi_colors[4] = g:github_colors["blue"][0]
+    let g:terminal_ansi_colors[12] = g:github_colors["lightblue"][0]
+
+    let g:terminal_ansi_colors[5] = g:github_colors["purp"][0]
+    let g:terminal_ansi_colors[13] = g:github_colors["lightpurp"][0]
+
+    let g:terminal_ansi_colors[6] = g:github_colors["blue"][0]
+    let g:terminal_ansi_colors[14] = g:github_colors["lightblue"][0]
+
+    let g:terminal_ansi_colors[7] = g:github_colors["base4"][0]
+    let g:terminal_ansi_colors[15] = g:github_colors["base5"][0]
 endif
 
 if !exists("g:gh_color")
