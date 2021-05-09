@@ -256,6 +256,28 @@ hi! link bibType LibraryType
 
 hi! link cDefine Keyword
 
+" Coc
+
+hi! link CocErrorSign ErrorMsg
+hi! link CocWarningSign WarningMsg
+hi! link CocInfoSign GhLightBlue
+hi! link CocHintSign GhLightPurp
+hi! link CocErrorFloat ErrorMsg
+hi! link CocWarningFloat WarningMsg
+hi! link CocInfoFloat GhLightBlue
+hi! link CocHintFloat GhLightPurp
+hi! link CocDiagnosticsError ErrorMsg
+hi! link CocDiagnosticsWarning WarningMsg
+hi! link CocDiagnosticsInfo GhLightBlue
+hi! link CocDiagnosticsHint GhLightPurp
+hi! link CocSelectedText GhLightRed
+hi! link CocCodeLens GhBase3
+
+call s:ghhl("CocErrorHighlight", "none", "none", "undercurl,bold")
+hi! link CocWarningHighlight CocErrorHighlight
+hi! link CocInfoHighlight CocErrorHighlight
+hi! link CocHintHighlight CocErrorHighlight
+
 " CSS
 
 hi! link cssAtRule Keyword
