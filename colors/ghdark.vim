@@ -457,7 +457,7 @@ hi! link vimFuncVar Normal
 hi! link vimGroup vimHiGroup
 hi! link vimHiBang vimOper
 hi! link vimHighlight Operator
-hi! link vimIsCommand vimOption
+hi! link vimIsCommand vimVar
 hi! link vimLet vimOper
 hi! link vimMapModKey vimNotation
 hi! link vimNotation LibraryType
