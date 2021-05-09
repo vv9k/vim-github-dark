@@ -137,10 +137,10 @@ let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 
 call s:ghhl("Comment", "base3")
 call s:ghhl("Constant", "lightblue")
-call s:ghhl("Cursor", "base1", "base1")
+call s:ghhl("Cursor", "none", "base4")
 call s:ghhl("CursorColumn", "none", "base1")
 call s:ghhl("CursorLine", "none", "base1")
-call s:ghhl("CursorLineNr", "base4", "base1")
+call s:ghhl("CursorLineNr", "lightblue", "base2")
 call s:ghhl("Delimiter", "base5")
 call s:ghhl("DiffAdd", "lightgreen", "base0")
 call s:ghhl("DiffChange", "yellow", "base0")
