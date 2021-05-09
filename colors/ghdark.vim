@@ -134,69 +134,130 @@ let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 
 "########################################
 " set the colors
+"
+call s:ghhl("GhBase0", "base0")
+call s:ghhl("GhBase1", "base1")
+call s:ghhl("GhBase2", "base2")
+call s:ghhl("GhBase3", "base3")
+call s:ghhl("GhBase4", "base4")
+call s:ghhl("GhBase5", "base5")
+call s:ghhl("GhLightRed", "lightred")
+call s:ghhl("GhRed", "red")
+call s:ghhl("GhLightYellow", "lightyellow")
+call s:ghhl("GhYellow", "yellow")
+call s:ghhl("GhLightBlue", "lightblue")
+call s:ghhl("GhBlue", "blue")
+call s:ghhl("GhLightPurp", "lightpurp")
+call s:ghhl("GhPurp", "purp")
+call s:ghhl("GhLightGreen", "lightgreen")
+call s:ghhl("GhGreen", "green")
 
-call s:ghhl("Comment", "base3")
-call s:ghhl("Constant", "lightblue")
 call s:ghhl("Cursor", "none", "base4")
 call s:ghhl("CursorColumn", "none", "base1")
 call s:ghhl("CursorLine", "none", "base1")
 call s:ghhl("CursorLineNr", "lightblue", "base2")
-call s:ghhl("Delimiter", "base5")
 call s:ghhl("DiffAdd", "lightgreen", "base0")
 call s:ghhl("DiffChange", "yellow", "base0")
 call s:ghhl("DiffDelete", "lightred", "base0")
-call s:ghhl("Directory", "blue")
 call s:ghhl("ErrorMsg", "lightred", "base0")
 call s:ghhl("Error", "none", "lightred")
 call s:ghhl("Folded", "blue", "base2")
-call s:ghhl("Function", "lightpurp")
-call s:ghhl("htmlTagName", "lightgreen")
-call s:ghhl("Identifier", "blue")
 call s:ghhl("IncSearch", "base5", "base2")
-call s:ghhl("Keyword", "lightred")
-call s:ghhl("Label", "blue")
-call s:ghhl("LineNr", "base3")
 call s:ghhl("MatchParen", "none", "base3")
-call s:ghhl("ModeMsg", "base4")
-call s:ghhl("MoreMsg", "base4")
-call s:ghhl("NonText", "base3")
 call s:ghhl("Normal", "base5", "base0")
-call s:ghhl("Operator", "blue")
 call s:ghhl("Pmenu", "base4", "base1")
 call s:ghhl("PmenuSel", "base4", "base2")
-call s:ghhl("PreProc", "base5")
-call s:ghhl("pythonOperator", "blue")
-call s:ghhl("Question", "base4")
-call s:ghhl("Repeat", "lightpurp")
 call s:ghhl("Search", "base5", "base2")
-call s:ghhl("shEcho", "blue")
 call s:ghhl("SignColumn", "none", "base0")
-call s:ghhl("Special", "blue")
-call s:ghhl("SpecialKey", "base3")
-call s:ghhl("Statement", "lightred")
 call s:ghhl("StatusLine", "base1", "base3")
 call s:ghhl("StatusLineNC", "base1", "base3")
-call s:ghhl("Title", "base4")
 call s:ghhl("Todo", "base4", "base0")
-call s:ghhl("Type", "lightred")
 call s:ghhl("VertSplit", "base1", "base1")
-call s:ghhl("vimHiGroup", "yellow")
 call s:ghhl("Visual", "base3", "base1")
 call s:ghhl("WarningMsg", "yellow", "base0")
 
 "########################################
 " links
 
+hi! link Boolean Constant
+hi! link Character Constant
+hi! link Comment GhBase3
+hi! link Conceal Ignore
+hi! link Conditional Statement
+hi! link Constant GhLightBlue
+hi! link Debug Special
+hi! link Define PreProc
+hi! link Delimiter GhBase5
+hi! link Directory GhBlue
+hi! link Exception Statement
+hi! link Float Number
+hi! link FunctionDef Function
+hi! link Function GhLightPurp
+hi! link Identifier GhBlue
+hi! link Include Statement
+hi! link Keyword GhLightRed
+hi! link Label GhBlue
+hi! link LibraryFunc Function
+hi! link LibraryIdent Identifier
+hi! link LibraryType Type
+hi! link LineNr GhBase3
+hi! link LocalFunc Function
+hi! link LocalIdent Identifier
+hi! link LocalType Type
+hi! link Macro PreProc
+hi! link ModeMsg GhBase4
+hi! link MoreMsg GhBase4
+hi! link MsgArea Title
+hi! link Noise Delimiter
+hi! link NonText GhBase3
+hi! link NonText Ignore
+hi! link Number GhBlue
+hi! link Operator GhBlue
+hi! link PreCondit PreProc
+hi! link PreProc GhBase5
+hi! link Question GhBase4
+hi! link Quote StringDelimiter
+hi! link Repeat GhLightPurp
+hi! link Searchlight IncSearch
+hi! link SignifySignAdd Signify
+hi! link SignifySignChange Signify
+hi! link SignifySignDelete Signify
+hi! link SpecialChar Special
+hi! link Special GhBlue
+hi! link SpecialKey GhBase3
+hi! link SpecialKey Ignore
+hi! link Statement GhLightRed
+hi! link StatusLineTermNC StatusLineNC
+hi! link StatusLineTerm StatusLine
+hi! link StorageClass Statement
+hi! link String Constant
+hi! link StringDelimiter String
+hi! link Structure Statement
+hi! link TabLineFill StatusLineNC
+hi! link TabLineSel StatusLine
+hi! link TabLine StatusLineNC
+hi! link Tag Special
+hi! link Terminal Normal
+hi! link Title GhBase4
+hi! link Type GhLightRed
+
+" ALE
+
 hi! link ALEVirtualTextError ErrorMsg
 hi! link ALEVirtualTextWarning WarningMsg
+
+" bib
+
 hi! link bibEntryKw LibraryIdent
 hi! link bibKey IdentifierDef
 hi! link bibType LibraryType
-hi! link Boolean Constant
+
+" C
+
 hi! link cDefine Keyword
-hi! link Character Constant
-hi! link Conceal Ignore
-hi! link Conditional Statement
+
+" CSS
+
 hi! link cssAtRule Keyword
 hi! link cssAtRuleLogical Identifier
 hi! link cssAttr Keyword
@@ -225,8 +286,9 @@ hi! link cssTextAttr cssBoxAttr
 hi! link cssTransitionAttr cssBoxAttr
 hi! link cssUIAttr cssBoxAttr
 hi! link cssUnitDecorators Normal
-hi! link Debug Special
-hi! link Define PreProc
+
+" diff
+
 hi! link diffAdded DiffAdd
 hi! link diffBDiffer WarningMsg
 hi! link diffChanged DiffChange
@@ -239,12 +301,15 @@ hi! link diffIsA WarningMsg
 hi! link diffNoEOL WarningMsg
 hi! link diffOnly WarningMsg
 hi! link diffRemoved DiffDelete
-hi! link Exception Statement
-hi! link Float Constant
-hi! link FunctionDef Function
+
+" Git commit
+
 hi! link gitcommitHeader Todo
 hi! link gitcommitOverflow Error
 hi! link gitcommitSummary Title
+
+" go
+
 hi! link goBuiltins Function
 hi! link goField LocalIdent
 hi! link goFunctionCall LibraryFunc
@@ -253,6 +318,9 @@ hi! link goLabel Keyword
 hi! link goType Normal
 hi! link goVarAssign LocalIdent
 hi! link goVarDefs IdentifierDef
+
+" Vim help
+
 hi! link helpCommand helpExample
 hi! link helpExample markdownCode
 hi! link helpHeadline Title
@@ -261,14 +329,23 @@ hi! link helpHyperTextJump Underlined
 hi! link helpSectionDelim Ignore
 hi! link helpURL helpHyperTextJump
 hi! link helpVim Title
+
+" HTML
+
 hi! link htmlArg Special
 hi! link htmlLink Underlined
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlTag Identifier
-hi! link Include Statement
+hi! link htmlTagName GhLightGreen
+
+" java
+
 hi! link javaScriptBraces Normal
 hi! link javaScriptFunction Keyword
 hi! link javaScriptIdentifier Keyword
+
+" jinja
+
 hi! link jinjaBlockName Typedef
 hi! link jinjaFilter LibraryFunc
 hi! link jinjaNumber Number
@@ -278,6 +355,9 @@ hi! link jinjaSpecial Keyword
 hi! link jinjaString String
 hi! link jinjaTagDelim Delimiter
 hi! link jinjaVarDelim Delimiter
+
+" JavaScript
+
 hi! link jsBuiltins LibraryFunc
 hi! link jsClassDefinition Typedef
 hi! link jsDestructuringBraces jsFuncBraces
@@ -306,13 +386,9 @@ hi! link jsParensIfElse jsFuncBraces
 hi! link jsParens jsFuncBraces
 hi! link jsThis jsStatement
 hi! link jsVariableDef IdentifierDef
-hi! link LibraryFunc Function
-hi! link LibraryIdent Identifier
-hi! link LibraryType Type
-hi! link LocalFunc Function
-hi! link LocalIdent Identifier
-hi! link LocalType Type
-hi! link Macro PreProc
+
+" markdown
+
 hi! link markdownBoldDelimiter markdownDelimiter
 hi! link markdownBoldItalicDelimiter markdownDelimiter
 hi! link markdownCodeBlock markdownCode
@@ -325,12 +401,12 @@ hi! link markdownLinkText None
 hi! link markdownListMarker markdownDelimiter
 hi! link markdownRule markdownDelimiter
 hi! link markdownUrl Underlined
-hi! link MsgArea Title
-hi! link Noise Delimiter
-hi! link NonText Ignore
-hi! link Number Constant
-hi! link PreCondit PreProc
-hi! link Quote StringDelimiter
+
+" python
+hi! link pythonOperator GhBlue
+
+" Rust
+
 hi! link rsForeignConst LibraryIdent
 hi! link rsForeignFunc LibraryFunc
 hi! link rsForeignType LibraryType
@@ -356,6 +432,9 @@ hi! link rustModPathSep Keyword
 hi! link rustOperator Keyword
 hi! link rustQuestionMark Normal
 hi! link rustSelf PreProc
+
+" SCSS
+
 hi! link scssAttribute cssNoise
 hi! link scssInclude Keyword
 hi! link scssMixin Keyword
@@ -364,13 +443,16 @@ hi! link scssMixinParams cssNoise
 hi! link scssSelectorName cssClassName
 hi! link scssVariableAssignment Operator
 hi! link scssVariableValue Operator
-hi! link Searchlight IncSearch
+
+" shell
+
 hi! link shAlias shVariable
 hi! link shCaseLabel Type
 hi! link shDerefPPS Keyword
 hi! link shDeref shVariable
 hi! link shDerefSimple shVariable
 hi! link shDoubleQuote shQuote
+hi! link shEcho GhBlue
 hi! link shEcho Normal
 hi! link shFunctionKey Keyword
 hi! link shFunctionOne Normal
@@ -385,17 +467,9 @@ hi! link shSnglCase shParen
 hi! link shStatement Keyword
 hi! link shVariable Normal
 hi! link shWrapLineOperator shParen
-hi! link SignifySignAdd Signify
-hi! link SignifySignChange Signify
-hi! link SignifySignDelete Signify
-hi! link SpecialChar Special
-hi! link SpecialKey Ignore
-hi! link StatusLineTermNC StatusLineNC
-hi! link StatusLineTerm StatusLine
-hi! link StorageClass Statement
-hi! link String Constant
-hi! link StringDelimiter String
-hi! link Structure Statement
+
+" swift
+
 hi! link swiftFuncDef FunctionDef
 hi! link swiftIdentDef IdentifierDef
 hi! link swiftLibraryFunc LibraryFunc
@@ -404,11 +478,9 @@ hi! link swiftLibraryType LibraryType
 hi! link swiftUserFunc LocalFunc
 hi! link swiftUserProp LocalIdent
 hi! link swiftUserType LocalType
-hi! link TabLineFill StatusLineNC
-hi! link TabLineSel StatusLine
-hi! link TabLine StatusLineNC
-hi! link Tag Special
-hi! link Terminal Normal
+
+" typescript
+
 hi! link typescriptArrayMethod LibraryFunc
 hi! link typescriptArrowFunc Operator
 hi! link typescriptAssign Operator
@@ -447,6 +519,9 @@ hi! link typescriptTypeReference typescriptUserDefinedType
 hi! link typescriptUserDefinedType LocalType
 hi! link typescriptVariableDeclaration IdentifierDef
 hi! link typescriptVariable Keyword
+
+" vim
+
 hi! link vimAutoCmdSfxList LibraryType
 hi! link vimAutoEventList LocalIdent
 hi! link vimCmdSep vimSep
@@ -460,6 +535,7 @@ hi! link vimFuncVar Normal
 hi! link vimGroup vimHiGroup
 hi! link vimHiBang vimOper
 hi! link vimHighlight Operator
+hi! link vimHiGroup GhYellow
 hi! link vimIsCommand vimVar
 hi! link vimLet vimOper
 hi! link vimMapModKey vimNotation
@@ -471,5 +547,6 @@ hi! link vimParenSep vimSep
 hi! link vimSep Normal
 hi! link vimUserFunc LocalFunc
 hi! link vimVar Normal
+
 hi! link VisualNOS Visual
 hi! link Whitespace Ignore
