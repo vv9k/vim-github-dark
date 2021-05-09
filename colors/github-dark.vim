@@ -15,6 +15,11 @@ let g:github_colors = {
   \ "green"        : "#8ddb8c",
   \ "none"         : "NONE", }
 
+" if doesn't support termguicolors or < 256 colors exit
+if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
+  finish
+endif
+
 if !exists("g:gh_color")
     let g:gh_color = "hard"
 endif
