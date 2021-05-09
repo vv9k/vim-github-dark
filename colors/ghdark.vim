@@ -1,4 +1,12 @@
-let g:colors_name = 'ghdark'
+if version > 580
+    hi clear
+    if exists('syntax_on')
+        syntax reset
+    endif
+endif
+
+let g:colors_name='ghdark'
+
 let g:github_colors = {
   \ "base0"        : ["#0d1117", 233],
   \ "base1"        : ["#2d333b", 235],
@@ -121,11 +129,6 @@ endfunction
 
 "########################################
 " clear any previous highlighting and syntax
-
-hi clear
-if exists('syntax_on')
-syntax reset
-endif
 
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 
