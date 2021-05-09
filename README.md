@@ -22,6 +22,7 @@ There are two backgrounds available, the default is the dark one matching the Gi
 ![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline1.png)
 ![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline2.png)
 ![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline3.png)
+![screenshot of airline bar](https://raw.githubusercontent.com/wojciechkepka/vim-github-dark/master/airline4.png)
 
 ## License
 [MIT](https://raw.githubusercontent.com/wojciechkepka/pkger/master/LICENSE)
