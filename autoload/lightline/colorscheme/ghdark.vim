@@ -19,20 +19,24 @@ if exists('g:lightline')
     let s:p.inactive.left =  [ [ s:base3, s:base1 ], [ s:base3, s:base1 ] ]
     let s:p.inactive.middle = [ [ s:base3, s:base1 ] ]
 
-    let s:p.normal.left = [ [ s:base0, s:lightblue, 'bold' ], [ s:base4, s:base2 ] ]
-    let s:p.normal.right = [ [ s:base0, s:lightblue ], [ s:base4, s:base2 ] ]
+    let s:p.normal.left = [ [ s:base0, s:lightblue, 'bold' ], [ s:base5, s:base2 ] ]
+    let s:p.normal.right = [ [ s:base0, s:lightblue ], [ s:base5, s:base2 ] ]
     let s:p.normal.middle = [ [ s:base4, s:base1 ] ]
 
     let s:p.insert.left = [ [ s:base0, s:lightred, 'bold' ], [ s:base5, s:base2 ] ]
-    let s:p.insert.right = [ [ s:base0, s:lightred ], [ s:base4, s:base2 ] ]
+    let s:p.insert.right = [ [ s:base0, s:lightred ], [ s:base5, s:base2 ] ]
     let s:p.insert.middle = [ [ s:base4, s:base2 ] ]
 
     let s:p.replace.left = [ [ s:base0, s:blue, 'bold' ], [ s:base5, s:base2 ] ]
     let s:p.replace.right = [ [ s:base0, s:blue ], [ s:base5, s:base2 ] ]
     let s:p.replace.middle = [ [ s:base4, s:base2 ] ]
 
-    let s:p.visual.left = [ [ s:base0, s:lightpurp, 'bold' ], [ s:base0, s:base3 ] ]
-    let s:p.visual.right = [ [ s:base0, s:lightpurp ], [ s:base4, s:base2 ] ]
+    let s:p.terminal.left = [ [ s:base0, s:yellow, 'bold' ], [ s:base5, s:base2 ] ]
+    let s:p.terminal.right = [ [ s:base0, s:yellow ], [ s:base5, s:base2 ] ]
+    let s:p.terminal.middle = [ [ s:base4, s:base2 ] ]
+
+    let s:p.visual.left = [ [ s:base0, s:lightpurp, 'bold' ], [ s:base5, s:base2 ] ]
+    let s:p.visual.right = [ [ s:base0, s:lightpurp ], [ s:base5, s:base2 ] ]
     let s:p.visual.middle = [ [ s:base4, s:base1 ] ]
 
     let s:p.tabline.left = [ [ s:base4, s:base2 ] ]
