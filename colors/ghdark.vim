@@ -447,15 +447,19 @@ hi! link rsUserLifetime LocalIdent
 hi! link rsUserMethod LibraryFunc
 hi! link rsUserType LocalType
 hi! link rustAttribute Normal
+hi! link rustCommentLineDoc rustCommentLine
 hi! link rustDerive rustAttribute
-hi! link rustEnumVariant Keyword
+hi! link rustDeriveTrait rustAttribute
+hi! link rustEnumVariant GhBlue
 hi! link rustIdentifier Function
 hi! link rustIdentifier Normal
+hi! link rustLifetime GhLightPurp
+hi! link rustMacro GhBlue
 hi! link rustModPath Normal
 hi! link rustModPathSep Keyword
 hi! link rustOperator Keyword
 hi! link rustQuestionMark Normal
-hi! link rustSelf PreProc
+hi! link rustSelf GhBlue
 
 " SCSS
 
