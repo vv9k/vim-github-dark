@@ -14,16 +14,12 @@ let g:github_colors = {
   \ "base3"        : ["#89929b", 243],
   \ "base4"        : ["#c6cdd5", 249],
   \ "base5"        : ["#ecf2f8", 252],
-  \ "lightred"     : ["#fa7970", 210],
-  \ "red"          : ["#f84b3e", 203],
-  \ "yellow"       : ["#faa356", 178],
-  \ "lightyellow"  : ["#fbb77b", 221],
+  \ "red"          : ["#fa7970", 210],
+  \ "orange"       : ["#faa356", 178],
+  \ "green"        : ["#7ce38b", 114],
   \ "lightblue"    : ["#a2d2fb", 153],
   \ "blue"         : ["#77bdfb", 75],
-  \ "lightpurp"    : ["#cea5fb", 183],
-  \ "purp"         : ["#b16ef8", 135],
-  \ "lightgreen"   : ["#7ce38b", 114],
-  \ "green"        : ["#53db67", 76],
+  \ "purp"         : ["#cea5fb", 183],
   \ "none"         : ["NONE", "NONE"]
   \ }
 
@@ -40,19 +36,19 @@ if has('nvim')
     let g:terminal_color_8 = g:github_colors["base3"][0]
 
     let g:terminal_color_1 = g:github_colors["red"][0]
-    let g:terminal_color_9 = g:github_colors["lightred"][0]
+    let g:terminal_color_9 = g:github_colors["red"][0]
 
     let g:terminal_color_2 = g:github_colors["green"][0]
-    let g:terminal_color_10 = g:github_colors["lightgreen"][0]
+    let g:terminal_color_10 = g:github_colors["green"][0]
 
-    let g:terminal_color_3 = g:github_colors["yellow"][0]
-    let g:terminal_color_11 = g:github_colors["lightyellow"][0]
+    let g:terminal_color_3 = g:github_colors["orange"][0]
+    let g:terminal_color_11 = g:github_colors["orange"][0]
 
     let g:terminal_color_4 = g:github_colors["blue"][0]
     let g:terminal_color_12 = g:github_colors["lightblue"][0]
 
     let g:terminal_color_5 = g:github_colors["purp"][0]
-    let g:terminal_color_13 = g:github_colors["lightpurp"][0]
+    let g:terminal_color_13 = g:github_colors["purp"][0]
 
     let g:terminal_color_6 = g:github_colors["blue"][0]
     let g:terminal_color_14 = g:github_colors["lightblue"][0]
@@ -69,19 +65,19 @@ if has('*term_setansicolors')
     let g:terminal_ansi_colors[8] = g:github_colors["base3"][0]
 
     let g:terminal_ansi_colors[1] = g:github_colors["red"][0]
-    let g:terminal_ansi_colors[9] = g:github_colors["lightred"][0]
+    let g:terminal_ansi_colors[9] = g:github_colors["red"][0]
 
     let g:terminal_ansi_colors[2] = g:github_colors["green"][0]
-    let g:terminal_ansi_colors[10] = g:github_colors["lightgreen"][0]
+    let g:terminal_ansi_colors[10] = g:github_colors["green"][0]
 
-    let g:terminal_ansi_colors[3] = g:github_colors["yellow"][0]
-    let g:terminal_ansi_colors[11] = g:github_colors["lightyellow"][0]
+    let g:terminal_ansi_colors[3] = g:github_colors["orange"][0]
+    let g:terminal_ansi_colors[11] = g:github_colors["orange"][0]
 
     let g:terminal_ansi_colors[4] = g:github_colors["blue"][0]
     let g:terminal_ansi_colors[12] = g:github_colors["lightblue"][0]
 
     let g:terminal_ansi_colors[5] = g:github_colors["purp"][0]
-    let g:terminal_ansi_colors[13] = g:github_colors["lightpurp"][0]
+    let g:terminal_ansi_colors[13] = g:github_colors["purp"][0]
 
     let g:terminal_ansi_colors[6] = g:github_colors["blue"][0]
     let g:terminal_ansi_colors[14] = g:github_colors["lightblue"][0]
@@ -141,28 +137,24 @@ call s:ghhl("GhBase2", "base2")
 call s:ghhl("GhBase3", "base3")
 call s:ghhl("GhBase4", "base4")
 call s:ghhl("GhBase5", "base5")
-call s:ghhl("GhLightRed", "lightred")
 call s:ghhl("GhRed", "red")
-call s:ghhl("GhLightYellow", "lightyellow")
-call s:ghhl("GhYellow", "yellow")
+call s:ghhl("GhOrange", "orange")
 call s:ghhl("GhLightBlue", "lightblue")
 call s:ghhl("GhBlue", "blue")
-call s:ghhl("GhLightPurp", "lightpurp")
 call s:ghhl("GhPurp", "purp")
-call s:ghhl("GhLightGreen", "lightgreen")
 call s:ghhl("GhGreen", "green")
 
 call s:ghhl("Cursor", "base4", "none", "reverse")
-call s:ghhl("iCursor", "base0", "lightred")
-call s:ghhl("vCursor", "base0", "lightpurp")
+call s:ghhl("iCursor", "base0", "red")
+call s:ghhl("vCursor", "base0", "purp")
 call s:ghhl("CursorColumn", "none", "base1")
 call s:ghhl("CursorLine", "none", "base1")
 call s:ghhl("CursorLineNr", "lightblue", "base2")
-call s:ghhl("DiffAdd", "lightgreen", "base0")
-call s:ghhl("DiffChange", "yellow", "base0")
-call s:ghhl("DiffDelete", "lightred", "base0")
-call s:ghhl("ErrorMsg", "lightred", "base1")
-call s:ghhl("Error", "none", "lightred")
+call s:ghhl("DiffAdd", "green", "base0")
+call s:ghhl("DiffChange", "orange", "base0")
+call s:ghhl("DiffDelete", "red", "base0")
+call s:ghhl("ErrorMsg", "red", "base1")
+call s:ghhl("Error", "none", "red")
 call s:ghhl("Folded", "blue", "base1")
 call s:ghhl("MatchParen", "none", "base3")
 call s:ghhl("Normal", "base5", "base0")
@@ -175,7 +167,7 @@ call s:ghhl("StatusLineNC", "base1", "base3")
 call s:ghhl("Todo", "base4", "base0")
 call s:ghhl("VertSplit", "base1", "base1")
 call s:ghhl("Visual", "none", "base0", "reverse")
-call s:ghhl("WarningMsg", "yellow", "base1")
+call s:ghhl("WarningMsg", "orange", "base1")
 
 "########################################
 " links
@@ -193,11 +185,11 @@ hi! link Directory GhBlue
 hi! link Exception Statement
 hi! link Float Number
 hi! link FunctionDef Function
-hi! link Function GhLightPurp
+hi! link Function GhPurp
 hi! link Identifier GhBlue
 hi! link Include Statement
 hi! link IncSearch Search
-hi! link Keyword GhLightRed
+hi! link Keyword GhRed
 hi! link Label GhBlue
 hi! link LibraryFunc Function
 hi! link LibraryIdent Identifier
@@ -219,7 +211,7 @@ hi! link PreCondit PreProc
 hi! link PreProc GhBase5
 hi! link Question GhBase4
 hi! link Quote StringDelimiter
-hi! link Repeat GhLightPurp
+hi! link Repeat GhPurp
 hi! link Searchlight Search
 hi! link SignifySignAdd Signify
 hi! link SignifySignChange Signify
@@ -228,7 +220,7 @@ hi! link SpecialChar Special
 hi! link Special GhBlue
 hi! link SpecialKey GhBase3
 hi! link SpecialKey Ignore
-hi! link Statement GhLightRed
+hi! link Statement GhRed
 hi! link StatusLineTermNC StatusLineNC
 hi! link StatusLineTerm StatusLine
 hi! link StorageClass Statement
@@ -241,7 +233,7 @@ hi! link TabLine StatusLineNC
 hi! link Tag Special
 hi! link Terminal Normal
 hi! link Title GhBase4
-hi! link Type GhLightRed
+hi! link Type GhRed
 
 " ALE
 
@@ -263,16 +255,16 @@ hi! link cDefine Keyword
 hi! link CocErrorSign ErrorMsg
 hi! link CocWarningSign WarningMsg
 hi! link CocInfoSign GhLightBlue
-hi! link CocHintSign GhLightPurp
+hi! link CocHintSign GhPurp
 hi! link CocErrorFloat ErrorMsg
 hi! link CocWarningFloat WarningMsg
 hi! link CocInfoFloat GhLightBlue
-hi! link CocHintFloat GhLightPurp
+hi! link CocHintFloat GhPurp
 hi! link CocDiagnosticsError ErrorMsg
 hi! link CocDiagnosticsWarning WarningMsg
 hi! link CocDiagnosticsInfo GhLightBlue
-hi! link CocDiagnosticsHint GhLightPurp
-hi! link CocSelectedText GhLightRed
+hi! link CocDiagnosticsHint GhPurp
+hi! link CocSelectedText GhRed
 hi! link CocCodeLens GhBase3
 
 call s:ghhl("CocErrorHighlight", "none", "none", "undercurl,bold")
@@ -360,7 +352,7 @@ hi! link htmlArg Special
 hi! link htmlLink Underlined
 hi! link htmlSpecialTagName htmlTagName
 hi! link htmlTag Identifier
-hi! link htmlTagName GhLightGreen
+hi! link htmlTagName GhGreen
 
 " java
 
@@ -453,7 +445,7 @@ hi! link rustDeriveTrait rustAttribute
 hi! link rustEnumVariant GhBlue
 hi! link rustIdentifier Function
 hi! link rustIdentifier Normal
-hi! link rustLifetime GhLightPurp
+hi! link rustLifetime GhPurp
 hi! link rustMacro GhBlue
 hi! link rustModPath Normal
 hi! link rustModPathSep Keyword
@@ -563,7 +555,7 @@ hi! link vimFuncVar Normal
 hi! link vimGroup vimHiGroup
 hi! link vimHiBang vimOper
 hi! link vimHighlight Operator
-hi! link vimHiGroup GhYellow
+hi! link vimHiGroup GhOrange
 hi! link vimIsCommand vimVar
 hi! link vimLet vimOper
 hi! link vimMapModKey vimNotation
@@ -577,7 +569,7 @@ hi! link vimUserFunc LocalFunc
 hi! link vimVar Normal
 hi! link vimUserAttrb Identifier
 hi! link vimUserCommand vimUserAttrb
-hi! link vimPatSepR GhLightGreen
+hi! link vimPatSepR GhGreen
 hi! link vimPatRegion vimPatSepR
 hi! link vimSynNotPatRange vimPatSepR
 hi! link vimSynKeyRegion Keyword
