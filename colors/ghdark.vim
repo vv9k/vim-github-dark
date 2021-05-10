@@ -164,12 +164,11 @@ call s:ghhl("DiffDelete", "lightred", "base0")
 call s:ghhl("ErrorMsg", "lightred", "base1")
 call s:ghhl("Error", "none", "lightred")
 call s:ghhl("Folded", "blue", "base1")
-call s:ghhl("IncSearch", "base5", "base2")
 call s:ghhl("MatchParen", "none", "base3")
 call s:ghhl("Normal", "base5", "base0")
 call s:ghhl("Pmenu", "base4", "base1")
 call s:ghhl("PmenuSel", "base4", "base2")
-call s:ghhl("Search", "base5", "base2")
+call s:ghhl("Search", "base0", "base5")
 call s:ghhl("SignColumn", "none", "base0")
 call s:ghhl("StatusLine", "base1", "base3")
 call s:ghhl("StatusLineNC", "base1", "base3")
@@ -197,6 +196,7 @@ hi! link FunctionDef Function
 hi! link Function GhLightPurp
 hi! link Identifier GhBlue
 hi! link Include Statement
+hi! link IncSearch Search
 hi! link Keyword GhLightRed
 hi! link Label GhBlue
 hi! link LibraryFunc Function
@@ -220,7 +220,7 @@ hi! link PreProc GhBase5
 hi! link Question GhBase4
 hi! link Quote StringDelimiter
 hi! link Repeat GhLightPurp
-hi! link Searchlight IncSearch
+hi! link Searchlight Search
 hi! link SignifySignAdd Signify
 hi! link SignifySignChange Signify
 hi! link SignifySignDelete Signify
