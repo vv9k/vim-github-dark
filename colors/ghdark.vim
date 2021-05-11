@@ -394,9 +394,6 @@ hi! link jsObjectBraces jsFuncBraces
 hi! link jsObjectKey jsObjectProp
 hi! link jsObjectProp LocalIdent
 hi! link jsObjectSeparator jsFuncBraces
-hi! link jsonKeyword jsonString
-hi! link jsonKeywordMatch Operator
-hi! link jsonQuote StringDelimiter
 hi! link jsOperatorKeyword jsStatement
 hi! link jsParensIfElse jsFuncBraces
 hi! link jsParens jsFuncBraces
@@ -601,3 +598,11 @@ hi! link NERDTreeHelp GhBase5
 hi! link tomlKey GhBase4
 hi! link tomlKeyValueArray GhBase4
 hi! link tomlTable GhPurp
+
+" json
+
+hi! link jsonBoolean GhBlue
+hi! link jsonKeywordMatch GhBase4
+hi! link jsonString String
+hi! link jsonKeyword jsonString
+hi! link jsonQuote jsonString
