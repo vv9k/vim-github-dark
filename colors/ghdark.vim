@@ -578,3 +578,9 @@ hi! link vimSyncMatch vimSynType
 
 hi! link VisualNOS Visual
 hi! link Whitespace Ignore
+
+" yaml
+
+hi! link yamlKey GhGreen
+hi! link yamlConstant GhBlue
+
