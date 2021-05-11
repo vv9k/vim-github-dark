@@ -595,3 +595,9 @@ hi! link NERDTreeExecFile GhOrange
 hi! link NERDTreeCWD GhPurp
 hi! link NERDTreeUp GhBase3
 hi! link NERDTreeHelp GhBase5
+
+" toml
+
+hi! link tomlKey GhBase4
+hi! link tomlKeyValueArray GhBase4
+hi! link tomlTable GhPurp
