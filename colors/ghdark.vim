@@ -143,6 +143,9 @@ call s:ghhl("GhLightBlue", "lightblue")
 call s:ghhl("GhBlue", "blue")
 call s:ghhl("GhPurp", "purp")
 call s:ghhl("GhGreen", "green")
+call s:ghhl("GhUnder", "none", "none", "underline")
+call s:ghhl("GhBold", "none", "none", "bold")
+call s:ghhl("GhItalic", "none", "none", "italic")
 
 call s:ghhl("Cursor", "base4", "none", "reverse")
 call s:ghhl("iCursor", "base0", "red")
@@ -402,18 +405,16 @@ hi! link jsVariableDef IdentifierDef
 
 " markdown
 
-hi! link markdownBoldDelimiter markdownDelimiter
-hi! link markdownBoldItalicDelimiter markdownDelimiter
-hi! link markdownCodeBlock markdownCode
-hi! link markdownCodeDelimiter markdownDelimiter
-hi! link markdownHeadingDelimiter markdownDelimiter
-hi! link markdownItalicDelimiter markdownDelimiter
-hi! link markdownLinkDelimiter markdownDelimiter
-hi! link markdownLinkTextDelimiter markdownDelimiter
-hi! link markdownLinkText None
-hi! link markdownListMarker markdownDelimiter
-hi! link markdownRule markdownDelimiter
-hi! link markdownUrl Underlined
+call s:ghhl("markdownH1", "base5", "none", "bold")
+hi! link markdownH2 markdownH1
+hi! link markdownH3 markdownH1
+hi! link markdownH4 markdownH1
+hi! link markdownH5 markdownH1
+hi! link markdownLinkText GhUnder
+hi! link markdownLinkUrl GhLightBlue
+hi! link markdownInlineCode GhBase3
+hi! link markdownBold GhBold
+hi! link markdownItalic GhItalic
 
 " python
 hi! link pythonOperator GhBlue
