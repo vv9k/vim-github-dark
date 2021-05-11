@@ -91,7 +91,9 @@ if !exists("g:gh_color")
 endif
 
 if g:gh_color ==# "soft"
-    let g:github_colors["base0"] = ["#161b22", 234]
+    let g:github_colors["base0"] = g:github_colors["base1"]
+    let g:github_colors["base1"] = g:github_colors["base2"]
+    let g:github_colors["base2"] = ["#30353c", 238]
 endif
 
 "########################################
