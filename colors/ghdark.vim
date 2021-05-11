@@ -584,3 +584,14 @@ hi! link Whitespace Ignore
 hi! link yamlKey GhGreen
 hi! link yamlConstant GhBlue
 
+" nerdtree
+
+hi! link NERDTreeDir GhBlue
+hi! link NERDTreeDirSlash GhBlue
+hi! link NERDTreeOpenable GhRed
+hi! link NERDTreeClosable GhGreen
+hi! link NERDTreeFile GhBase5
+hi! link NERDTreeExecFile GhOrange
+hi! link NERDTreeCWD GhPurp
+hi! link NERDTreeUp GhBase3
+hi! link NERDTreeHelp GhBase5
