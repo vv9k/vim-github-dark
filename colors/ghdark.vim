@@ -140,9 +140,11 @@ call s:ghhl("GhBase3", "base3")
 call s:ghhl("GhBase4", "base4")
 call s:ghhl("GhBase5", "base5")
 call s:ghhl("GhRed", "red")
+call s:ghhl("GhPurpUnder", "purp", "none", "underline")
 call s:ghhl("GhOrange", "orange")
 call s:ghhl("GhLightBlue", "lightblue")
 call s:ghhl("GhBlue", "blue")
+call s:ghhl("GhBlueItalic", "blue", "none", "italic")
 call s:ghhl("GhPurp", "purp")
 call s:ghhl("GhGreen", "green")
 call s:ghhl("GhUnder", "none", "none", "underline")
@@ -412,9 +414,13 @@ hi! link markdownH2 markdownH1
 hi! link markdownH3 markdownH1
 hi! link markdownH4 markdownH1
 hi! link markdownH5 markdownH1
-hi! link markdownLinkText GhUnder
-hi! link markdownLinkUrl GhLightBlue
-hi! link markdownInlineCode GhBase3
+hi! link markdownCode GhLightBlue
+hi! link markdownCodeDelimiter GhLightBlue
+hi! link markdownInlineCode markdownCode
+hi! link markdownListMarker GhRed
+hi! link markdownLinkText GhPurpUnder
+hi! link markdownUrl GhBlueItalic
+hi! link markdownLinkUrl markdownUrl
 hi! link markdownBold GhBold
 hi! link markdownItalic GhItalic
 
