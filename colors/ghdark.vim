@@ -425,6 +425,10 @@ hi! link markdownBold GhBold
 hi! link markdownItalic GhItalic
 
 " python
+hi! link pythonClass GhOrange
+hi! link pythonRepeat Keyword
+hi! link pythonBoolean GhBlue
+hi! link pythonBuiltin GhBlue
 hi! link pythonOperator GhBlue
 
 " Rust
