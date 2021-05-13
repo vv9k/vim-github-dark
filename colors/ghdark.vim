@@ -429,7 +429,12 @@ hi! link pythonClass GhOrange
 hi! link pythonRepeat Keyword
 hi! link pythonBoolean GhBlue
 hi! link pythonBuiltin GhBlue
+hi! link pythonBuiltinType GhBase5
+hi! link pythonClassVar GhBase5
+hi! link pythonOperator None
 hi! link pythonOperator GhBlue
+hi! link pythonRun GhBase3
+hi! link pythonDecorator GhPurp
 
 " Rust
 
