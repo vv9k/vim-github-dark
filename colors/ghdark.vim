@@ -282,17 +282,31 @@ hi! link CocHintHighlight CocErrorHighlight
 " CSS
 
 hi! link cssAtRule Keyword
-hi! link cssAtRuleLogical Identifier
-hi! link cssAttr Keyword
-hi! link cssAttrRegion Function
+hi! link cssAtKeyword Keyword
+hi! link cssMediaProp GhBlue
+hi! link cssBoxProp GhBlue
+hi! link cssFlexibleBoxProp cssBoxProp
+hi! link cssPositioningProp cssBoxProp
+hi! link cssBackgroundProp cssBoxProp
+hi! link cssBorderProp cssBoxProp
+hi! link cssIEUIProp cssBoxProp
+hi! link cssFontDescriptorProp cssBoxProp
+hi! link cssTextProp cssBoxProp
+hi! link cssCustomProp GhWhite
+hi! link cssUIProp cssBoxProp
+hi! link cssTransitionProp cssBoxProp
+hi! link cssCascadeProp cssBoxProp
+hi! link cssColorProp cssBoxProp
+hi! link cssListProp cssBoxProp
+hi! link cssPageProp cssBoxProp
+hi! link cssAttrComma GhWhite
 hi! link cssBackgroundAttr cssBoxAttr
 hi! link cssBorderAttr cssBoxAttr
 hi! link cssBoxAttr Normal
 hi! link cssBraces cssNoise
 hi! link cssClassName LocalIdent
-hi! link cssColor Constant
+hi! link cssColor LightBlue
 hi! link cssCommonAttr cssBoxAttr
-hi! link cssCustomProp Identifier
 hi! link cssFlexibleBoxAttr cssBoxAttr
 hi! link cssFunction None
 hi! link cssIdentifier LocalIdent
