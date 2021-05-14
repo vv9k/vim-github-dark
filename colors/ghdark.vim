@@ -406,6 +406,11 @@ hi! link jsParensIfElse jsFuncBraces
 hi! link jsParens jsFuncBraces
 hi! link jsThis jsStatement
 hi! link jsVariableDef IdentifierDef
+hi! link jsBooleanFalse GhBlue
+hi! link jsBooleanTrue jsBooleanFalse
+hi! link jsRepeat Keyword
+hi! link jsArrowFunction GhBlue
+hi! link jsTernaryIfOperator jsDot
 
 " markdown
 
