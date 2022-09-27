@@ -438,7 +438,6 @@ hi! link markdownH3 markdownH1
 hi! link markdownH4 markdownH1
 hi! link markdownH5 markdownH1
 hi! link markdownHeadingDelimiter GhBlueBold
-hi! link markdownDelimiter GhOrange
 hi! link markdownCode GhLightBlue
 hi! link markdownCodeDelimiter GhLightBlue
 hi! link markdownInlineCode markdownCode
