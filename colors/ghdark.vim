@@ -216,7 +216,7 @@ hi! link MsgArea Title
 hi! link Noise Delimiter
 hi! link NonText GhBase3
 hi! link NonText Ignore
-hi! link Number GhBlue
+hi! link Number GhOrange
 hi! link Operator GhBlue
 hi! link PreCondit PreProc
 hi! link PreProc GhBlue
