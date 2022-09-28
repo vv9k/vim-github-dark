@@ -115,13 +115,13 @@ function! s:ghhl(group, guifg, ...)
     else
         let style = "NONE"
     endif
-    
+
     let hi_str = [ "hi", a:group,
             \ 'guifg=' . fg[0], "ctermfg=" . fg[1],
             \ 'guibg=' . bg[0], "ctermbg=" . bg[1],
             \ 'gui=' . style, "cterm=" . style
             \ ]
-    
+
     execute join(hi_str, ' ')
 endfunction
 
@@ -140,12 +140,16 @@ call s:ghhl("GhBase3", "base3")
 call s:ghhl("GhBase4", "base4")
 call s:ghhl("GhBase5", "base5")
 call s:ghhl("GhRed", "red")
-call s:ghhl("GhPurpUnder", "purp", "none", "underline")
-call s:ghhl("GhOrange", "orange")
-call s:ghhl("GhLightBlue", "lightblue")
-call s:ghhl("GhBlue", "blue")
-call s:ghhl("GhBlueItalic", "blue", "none", "italic")
+call s:ghhl("GhRedItalic", "red", "none", "italic")
 call s:ghhl("GhPurp", "purp")
+call s:ghhl("GhPurpUnder", "purp", "none", "underline")
+call s:ghhl("GhBlue", "blue")
+call s:ghhl("GhBlueUnder", "blue", "none", "underline")
+call s:ghhl("GhBlueBold", "blue", "none", "bold")
+call s:ghhl("GhBlueItalic", "blue", "none", "italic")
+call s:ghhl("GhOrange", "orange")
+call s:ghhl("GhOrangeBold", "orange", "none", "bold")
+call s:ghhl("GhLightBlue", "lightblue")
 call s:ghhl("GhGreen", "green")
 call s:ghhl("GhUnder", "none", "none", "underline")
 call s:ghhl("GhBold", "none", "none", "bold")
@@ -215,7 +219,7 @@ hi! link NonText Ignore
 hi! link Number GhBlue
 hi! link Operator GhBlue
 hi! link PreCondit PreProc
-hi! link PreProc GhBase5
+hi! link PreProc GhBlue
 hi! link Question GhBase4
 hi! link Quote StringDelimiter
 hi! link Repeat GhPurp
@@ -428,17 +432,18 @@ hi! link jsTernaryIfOperator jsDot
 
 " markdown
 
-call s:ghhl("markdownH1", "base5", "none", "bold")
+hi! link markdownH1 GhOrangeBold
 hi! link markdownH2 markdownH1
 hi! link markdownH3 markdownH1
 hi! link markdownH4 markdownH1
 hi! link markdownH5 markdownH1
+hi! link markdownHeadingDelimiter GhBlueBold
 hi! link markdownCode GhLightBlue
 hi! link markdownCodeDelimiter GhLightBlue
 hi! link markdownInlineCode markdownCode
-hi! link markdownListMarker GhRed
-hi! link markdownLinkText GhPurpUnder
-hi! link markdownUrl GhBlueItalic
+hi! link markdownListMarker GhOrange
+hi! link markdownLinkText GhBlueUnder
+hi! link markdownUrl GhRedItalic
 hi! link markdownLinkUrl markdownUrl
 hi! link markdownBold GhBold
 hi! link markdownItalic GhItalic
@@ -503,8 +508,8 @@ hi! link scssVariableValue Operator
 hi! link shAlias shVariable
 hi! link shCaseLabel Type
 hi! link shDerefPPS Keyword
-hi! link shDeref shVariable
-hi! link shDerefSimple shVariable
+hi! link shDeref GhBlue
+hi! link shDerefSimple GhBlue
 hi! link shDoubleQuote shQuote
 hi! link shEcho GhBlue
 hi! link shEcho Normal
@@ -519,7 +524,7 @@ hi! link shRedir Keyword
 hi! link shSetList shFunctionOne
 hi! link shSnglCase shParen
 hi! link shStatement Keyword
-hi! link shVariable Normal
+hi! link shVariable GhRed
 hi! link shWrapLineOperator shParen
 
 " swift
@@ -528,7 +533,7 @@ hi! link swiftFuncDef FunctionDef
 hi! link swiftIdentDef IdentifierDef
 hi! link swiftLibraryFunc LibraryFunc
 hi! link swiftLibraryProp LibraryIdent
-hi! link swiftLibraryType LibraryType
+ hi! link swiftLibraryType LibraryType
 hi! link swiftUserFunc LocalFunc
 hi! link swiftUserProp LocalIdent
 hi! link swiftUserType LocalType
@@ -616,7 +621,7 @@ hi! link Whitespace Ignore
 " yaml
 
 hi! link yamlKey GhGreen
-hi! link yamlConstant GhBlue
+hi! link yamlConstant GhRed
 
 " nerdtree
 
