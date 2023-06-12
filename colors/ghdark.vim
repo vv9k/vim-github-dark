@@ -15,7 +15,7 @@ let g:github_colors = {
   \ "base4"        : ["#c6cdd5", 249],
   \ "base5"        : ["#ecf2f8", 252],
   \ "red"          : ["#fa7970", 210],
-  \ "orange"       : ["#faa356", 178],
+  \ "orange"       : ["#faa356", 172],
   \ "green"        : ["#7ce38b", 114],
   \ "lightblue"    : ["#a2d2fb", 153],
   \ "blue"         : ["#77bdfb", 75],
